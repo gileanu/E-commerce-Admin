@@ -1,1 +1,3 @@
-# E-commerce Admin to use later for a fully working E-commerce Website
+# E-commerce Admin Project
+
+Backend dashboard for a full stack E-commerce Website using Next.js, React, Tailwind and Prisma<br>
