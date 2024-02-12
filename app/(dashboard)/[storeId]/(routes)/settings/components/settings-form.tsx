@@ -38,8 +38,6 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
     const params = useParams();
     const router = useRouter();
     const origin = useOrigin();
-
-    console.log(origin);
     
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
