@@ -103,11 +103,11 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
         <Separator />
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
-                <FormField control={form.control} name="label" render={({field}) => (
+                <FormField control={form.control} name="imageUrl" render={({field}) => (
                     <FormItem>
                         <FormLabel>Background Image</FormLabel>
                         <FormControl>
-                            <ImageUpload value={field.value? [field.value] : []} disabled={loading} onChange={(url) => field.onChange(url)} onRemove={() => field.onChange("")}/>
+                            <ImageUpload value={field.value? [field.value] : []} disabled={loading} onChange={(url) => field.onChange(url)} onRemove={() => field.onChange('')}/>
                         </FormControl>
                         <FormMessage />
                     </FormItem>
@@ -115,11 +115,11 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
                 <div className="grid grid-cols-3 gap-3">
                     <FormField control={form.control} name="label" render={({field}) => (
                         <FormItem>
-                            <FormLabel>Label</FormLabel>
-                            <FormControl>
-                                <Input disabled={loading} placeholder="Billboard Label"/>
-                            </FormControl>
-                            <FormMessage />
+                        <FormLabel>Label</FormLabel>
+                        <FormControl>
+                            <Input disabled={loading} placeholder="Billboard label" {...field} />
+                        </FormControl>
+                        <FormMessage />
                         </FormItem>
                     )}/>
                 </div>
