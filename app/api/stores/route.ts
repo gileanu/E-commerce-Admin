@@ -13,7 +13,7 @@ export async function POST(
         const { name } = body;
 
         if(!userId) {
-            return new NextResponse("Unautorized", { status: 400 });
+            return new NextResponse("Log in is required", { status: 400 });
         }
 
         if(!name) {
