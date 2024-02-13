@@ -21,8 +21,12 @@ import { Billboard, Category } from "@prisma/client";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const formSchema = z.object ({
-    name: z.string().min(5),
-    billboardId: z.string().min(1)
+    name: z.string().min(5, {
+        message: "Category name must be at least 5 characters long"
+    }),
+    billboardId: z.string().min(1, {
+        message: "Select a Billboard"
+    })
 });
 
 type CategoryFormValues = z.infer<typeof formSchema>

@@ -14,7 +14,9 @@ import { Button } from "../ui/button";
 import toast from "react-hot-toast";
 
 const formSchema = z.object({
-    name: z.string().min(5),
+    name: z.string().min(5, {
+        message: "Store name must be at least 5 characters long"
+    }),
 });
 
 export const StoreModal = () => {
@@ -51,7 +53,7 @@ export const StoreModal = () => {
                                 <FormItem>
                                     <FormLabel>Store name:</FormLabel>
                                     <FormControl>
-                                        <Input disabled={loading} placeholder="Gil's Webstore" {...field} />
+                                        <Input disabled={loading} placeholder="Gil's T-shirt Store" {...field} />
                                     </FormControl>
                                     <FormMessage></FormMessage>
                                 </FormItem>

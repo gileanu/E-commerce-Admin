@@ -26,7 +26,9 @@ interface SettingsFormProps {
 }
 
 const formSchema = z.object ({
-    name: z.string().min(5),
+    name: z.string().min(5, {
+        message: "Store name must be at least 5 characters long"
+    }), 
 });
 
 type SettingsFormValues = z.infer<typeof formSchema>

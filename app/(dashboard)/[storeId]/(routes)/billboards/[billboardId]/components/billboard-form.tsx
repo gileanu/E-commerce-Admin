@@ -21,8 +21,12 @@ import { AlertModal } from "@/components/modals/alert-modal";
 import ImageUpload from "@/components/ui/image-upload";
 
 const formSchema = z.object ({
-    label: z.string().min(5),
-    imageUrl: z.string().min(1)
+    label: z.string().min(5, {
+        message: "Billboard name must be at least 5 characters long"
+    }),
+    imageUrl: z.string().min(1, {
+        message: "Upload an Image"
+    })
 });
 
 type BillboardFormValues = z.infer<typeof formSchema>
@@ -103,7 +107,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
                 <FormField control={form.control} name="imageUrl" render={({field}) => (
                     <FormItem>
-                        <FormLabel>Background Image</FormLabel>
+                        <FormLabel>Store Billboard</FormLabel>
                         <FormControl>
                             <ImageUpload value={field.value? [field.value] : []} disabled={loading} onChange={(url) => field.onChange(url)} onRemove={() => field.onChange('')}/>
                         </FormControl>
