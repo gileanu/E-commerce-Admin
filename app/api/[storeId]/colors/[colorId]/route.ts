@@ -8,7 +8,7 @@ export async function GET(
 ) {
   try {
     if (!params.colorId) {
-      return new NextResponse("Size ID is required", { status: 400 });
+      return new NextResponse("Color ID is required", { status: 400 });
     }
 
     const color = await prismadb.color.findUnique({
@@ -108,7 +108,7 @@ export async function DELETE(
       return new NextResponse("Unauthorized", { status: 403 });
     }
 
-    const color = await prismadb.size.deleteMany({
+    const color = await prismadb.color.deleteMany({
       where: {
         id: params.colorId,
       },
