@@ -29,7 +29,7 @@ export const CellAction: React.FC<CellActionProsp> = ({ data }) => {
 
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id);
-    toast.success("Copied to clipboard!");
+    toast.success("Category ID copied to clipboard!");
   };
 
   const onDelete = async () => {
