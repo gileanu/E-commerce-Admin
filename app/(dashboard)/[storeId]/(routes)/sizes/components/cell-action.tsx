@@ -7,7 +7,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { CategoryColumn } from "./columns";
+import { SizeColumn } from "./columns";
 import { Button } from "@/components/ui/button";
 import { CopyIcon, EditIcon, MoreHorizontal, TrashIcon } from "lucide-react";
 import { toast } from "react-hot-toast";
@@ -17,7 +17,7 @@ import axios from "axios";
 import { AlertModal } from "@/components/modals/alert-modal";
 
 interface CellActionProsp {
-  data: CategoryColumn;
+  data: SizeColumn;
 }
 
 export const CellAction: React.FC<CellActionProsp> = ({ data }) => {
@@ -35,11 +35,11 @@ export const CellAction: React.FC<CellActionProsp> = ({ data }) => {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/categories/${data.id}`);
+      await axios.delete(`/api/${params.storeId}/sizes/${data.id}`);
       router.refresh();
-      toast.success("Category deleted");
+      toast.success("Size deleted");
     } catch (error) {
-      toast.error("Make sure you removed all Products using this Category");
+      toast.error("Make sure you removed all Products using this Size");
     } finally {
       setLoading(false);
       setOpen(false);
@@ -68,9 +68,7 @@ export const CellAction: React.FC<CellActionProsp> = ({ data }) => {
             Copy ID
           </DropdownMenuItem>
           <DropdownMenuItem
-            onClick={() =>
-              router.push(`/${params.storeId}/categories/${data.id}`)
-            }
+            onClick={() => router.push(`/${params.storeId}/sizes/${data.id}`)}
           >
             <EditIcon className="mr-2 h-4 w-4" />
             Edit
