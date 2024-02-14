@@ -28,6 +28,10 @@ export const columns: ColumnDef<ColorColumn>[] = [
     ),
   },
   {
+    accessorKey: "createdAt",
+    header: "Date",
+  },
+  {
     id: "actions",
     cell: ({ row }) => <CellAction data={row.original} />,
   },
