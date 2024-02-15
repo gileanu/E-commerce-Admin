@@ -51,7 +51,7 @@ export const ApiAlert: React.FC<ApiAlertProps> = ({
         </code>
         <TooltipProvider>
           <Tooltip>
-            <TooltipTrigger>
+            <TooltipTrigger asChild>
               <Button variant="outline" size="icon" onClick={onCopy}>
                 <CopyIcon className="h-4 w-4" />
               </Button>
