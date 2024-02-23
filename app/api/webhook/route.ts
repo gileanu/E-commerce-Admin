@@ -45,7 +45,7 @@ export async function POST(req: Request) {
         adress: addressString,
         phone: session?.customer_details?.phone || "",
       },
-      include: {
+      /** include: {
         orderItems: true,
       },
     });
@@ -60,7 +60,7 @@ export async function POST(req: Request) {
       },
       data: {
         isArchived: true,
-      },
+      },*/
     });
   }
 
