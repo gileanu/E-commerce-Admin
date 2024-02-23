@@ -24,7 +24,7 @@ export const Overview: React.FC<OverviewProps> = ({ data }) => {
           axisLine={false}
           tickFormatter={(value) => `$${value}`}
         />
-        <Bar dataKey="total" fill="#000000" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="total" fill="#08b651" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );
