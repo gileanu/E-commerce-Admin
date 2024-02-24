@@ -8,6 +8,8 @@ The source code of this project is not mine, I took inspiration from watching th
 
 _Note: This tutorial being a few months old, there were a couple of things that I had to make work with the current versions of Next.js and other dependencies used to develop this project._
 
+_Note: Later versions of this project will use built-in Auth it's own CMS._
+
 ## Stack:
 
 - Next.js 14.1 with App Router
@@ -18,29 +20,27 @@ _Note: This tutorial being a few months old, there were a couple of things that 
 
 - shadcn/ui
 
-## Auth:
+### Auth:
 
 - [Clerk](https://clerk.com)
 
-## Content Management System:
+### Content Management System:
 
 - [Cloudinary](https://cloudinary.com)
 
-_Note: Later versions of this project will use built-in Auth it's own CMS._
-
-## Payments:
+### Payments:
 
 - [Stripe](https://stripe.com/)
 
 ### Screenshots:
 
-<p style="text-align:center">Dashboard page:</p>
+Dashboard page:
 ![daschboard-page](/readme-images/Screenshot%202024-02-24%20at%2012.27.54 PM.png)
-<p style="text-align:center">Billboard page:</p>
+Billboard page:
 ![billboard-page](/readme-images/Screenshot%202024-02-24%20at%2012.29.13 PM.png)
-<p style="text-align:center">Settings page:</p>
+Settings page:
 ![settings-page](/readme-images/Screenshot%202024-02-24%20at%2012.30.36 PM.png)
-<p style="text-align:center">Products page:</p>
+Products page:
 ![products-page](/readme-images/Screenshot%202024-02-24%20at%2012.31.10 PM.png)
-<p style="text-align:center">Orders page (Phone and address work, just redacted from screenshot):</p>
+Orders page (Phone and address work, just redacted from screenshot):
 ![orders-page](/readme-images/Screenshot-2024-02-24-at-12.31.55 PM.png)
